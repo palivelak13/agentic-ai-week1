@@ -17,8 +17,17 @@
 
 #AGENT 2: MARKET CONCEPT EXPLAINER
 
+# from app.agent import run_agent
 from app.agent import run_agent
-
 if __name__ == "__main__":
-    goal = "Explain how stock prices move"
+    goal = "Explain why humor helps in communication"
     run_agent(goal)
+ 
+def decide_next_step(memory: dict) -> str:
+    print("\n[CONTROL] Current memory:", memory)
+ 
+    if memory["completed"]:
+        return "stop"
+ 
+    
+ 
