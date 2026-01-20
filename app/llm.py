@@ -21,4 +21,3 @@ def call_llm(prompt: str) -> str:
     result = response.json()["response"]
     print("[LLM] Response received")
     return result
- 
