@@ -21,7 +21,7 @@
 from app.agent import run_agent
  
 if __name__ == "__main__":
-    goal = "Explain why humor helps in communication"
+    goal = "Explain LLM "
     run_agent(goal)
     
  
