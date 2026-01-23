@@ -35,28 +35,51 @@
 #     print("[TOOL] Joke fetched successfully")
 #     return joke
 
-import requests
+# import requests
+# import random
+ 
+# def fetch_joke_tool() -> str:
+#     print("[TOOL] Calling external Joke API")
+ 
+#     # Simulate failure sometimes (for learning)
+#     if random.choice([True, False]):
+#         print("[TOOL] Simulated tool failure")
+#         return "TOOL_FAILED"
+ 
+#     response = requests.get(
+#         "https://official-joke-api.appspot.com/random_joke",
+#         timeout=5
+#     )
+ 
+#     if response.status_code != 200:
+#         print("[TOOL] API error")
+#         return "TOOL_FAILED"
+ 
+#     data = response.json()
+#     joke = f"{data['setup']} — {data['punchline']}"
+#     print("[TOOL] Joke fetched successfully")
+#     return joke
+ 
+#practice agent
 import random
- 
-def fetch_joke_tool() -> str:
-    print("[TOOL] Calling external Joke API")
- 
+
+MOVIE_TICKETS = [
+    {"movie": "Inception", "price": 12.5, "currency": "USD"},
+    {"movie": "Interstellar", "price": 15.0, "currency": "USD"},
+    {"movie": "Avatar", "price": 10.0, "currency": "USD"}
+]
+
+def fetch_ticket_tool() -> dict:
+    print("[TOOL] Fetching movie ticket data")
+
     # Simulate failure sometimes (for learning)
     if random.choice([True, False]):
         print("[TOOL] Simulated tool failure")
-        return "TOOL_FAILED"
- 
-    response = requests.get(
-        "https://official-joke-api.appspot.com/random_joke",
-        timeout=5
-    )
- 
-    if response.status_code != 200:
-        print("[TOOL] API error")
-        return "TOOL_FAILED"
- 
-    data = response.json()
-    joke = f"{data['setup']} — {data['punchline']}"
-    print("[TOOL] Joke fetched successfully")
-    return joke
- 
+        return {"status": "FAILED"}
+
+    ticket = random.choice(MOVIE_TICKETS)
+    print("[TOOL] Ticket fetched successfully")
+    return {
+        "status": "SUCCESS",
+        "data": ticket
+    }
