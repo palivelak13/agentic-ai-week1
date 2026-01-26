@@ -85,8 +85,20 @@
 #     }
 
 
-def market_explainer_tool(text: str) -> str:
-    print("\n[TOOL] MARKET EXPLANATION:")
-    print(text)
-    return "EXPLANATION_PRESENTED"
- 
+# def market_explainer_tool(text: str) -> str:
+#     print("\n[TOOL] MARKET EXPLANATION:")
+#     print(text)
+#     return "EXPLANATION_PRESENTED"
+
+#week 2 assignment 3
+
+def read_notice(file_path="app/notice.txt"):
+    with open(file_path, "r") as file:
+        return file.read()
+
+
+def explain_notice(notice_text):
+    return (
+        "The notice means that the college will be closed on Friday "
+        "because maintenance work is being done."
+    )

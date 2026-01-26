@@ -32,11 +32,18 @@
 #     run_agent(goal)
  
 
-from app.agent import run_agent
+# from app.agent import run_agent
  
+# if __name__ == "__main__":
+#     goal = "Explain inflation in very simple terms"
+#     run_agent(goal)
+
+#week 2 assignment 3
+from app.control import run_agent
+
 if __name__ == "__main__":
-    goal = "Explain inflation in very simple terms"
-    run_agent(goal)
+    run_agent()
+
  
 
     
