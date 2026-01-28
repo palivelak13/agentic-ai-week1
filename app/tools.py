@@ -96,7 +96,6 @@ def read_notice(file_path="app/notice.txt"):
     with open(file_path, "r") as file:
         return file.read()
 
-
 def explain_notice(notice_text):
     return (
         "All students are informed that the school will remain closed on Monday due to a staff meeting. "
