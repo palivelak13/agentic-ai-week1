@@ -99,6 +99,6 @@ def read_notice(file_path="app/notice.txt"):
 
 def explain_notice(notice_text):
     return (
-        "The notice means that the college will be closed on Friday "
-        "because maintenance work is being done."
+        "All students are informed that the school will remain closed on Monday due to a staff meeting. "
+        "Regular classes will resume from Tuesday."
     )
